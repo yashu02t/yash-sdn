@@ -35,6 +35,13 @@ Following is the summary of the TCP SYN mitigation application:
     * Black lists the source IP addresses of the offender (malicious flows originator)
     * Blocks the packets originating from the black listed sources.
     * Allows packets of different flow of clients when these flows do not reach malicious threshold condition.
+    * The Botnet attack detection and mitigation application sets a malicious flow threshold condition to identify Botnet attack.
+    * The malicious threshold condition is set based on the number of packets (with destination http port) received per second for a particular flow.  
+    * Based on the flow statistics, Controller detects whether the flow is malicious. This is achieved on the malicious flow condition:
+      * If the packets/sec is < 40 of a flow and packet destination port is 8080, the flow is treated as normal flow.
+      * If the packets/sec is > 40 of a flow and packet destination port is 8080, the flow is treated as malicious flow, the controller instructs the switch to drop the packets and delete the flow.
+
+
 
 ## Botnet Attack Mitigation
 
