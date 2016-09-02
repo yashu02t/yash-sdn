@@ -51,6 +51,14 @@ Following is the summary of the TCP SYN mitigation application:
    * The defense when there is a malicious flow by deleting the flow pertaining to Bots 
    * Black listing the Bots
    * At the same time,  allows legitimate flows that do not exceed the malicious threshold condition of Botnet attacks
+* Two Bots (Bot-1 and Bot-2) are used to simulate Bonet attacks, these Bots are compromised hosts and are controlled by Bot-Master. 
+* Http request is sent from Bot-1 and Bot-2 to Bot-Master. 
+* These Bots download the malicious attack instructions file (Example, “Attack.txt”) as intended by the Bot-Master.
+* This file has the following information:
+   * Server IP and http port number of to victim server
+   * File name to request the victim server.
+   * Sting name to start the attack, for example “start attack”.
+
 
    
 
