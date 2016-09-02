@@ -28,7 +28,7 @@ Following is the summary of the TCP SYN mitigation application:
     * If the SYN packets/sec is < 40 of a flow, the flow is treated as normal flow
     * If the SYN packets/sec is > 40 of a flow, the flow is treated as malicious flow, the controller instructs the switch to drop the
     * packets and delete the flow.
-* POX Controller application controls the Open virtual switches:
+* POX Controller application controls the Open virtual switches
     * Adds the flows
     * Allows flows that are not treated malicious
     * Delete the flows that are malicious.
