@@ -58,6 +58,10 @@ Following is the summary of the TCP SYN mitigation application:
    * Server IP and http port number of to victim server
    * File name to request the victim server.
    * Sting name to start the attack, for example “start attack”.
+* The Bots, based on the instruction received from Bot-Master (input from the file “Attack.txt”), the Bots floods http requests to the server (victim).
+* The Botnet attack detection and mitigation application on the controller reacts to the flow statistics received from the Open virtual switches and blocks the flow if the packets in the flow exceed the malicious threshold condition.
+* In parallel, the Open virtual switches forward a legitimate request from the client to the server, as this flow did not exceed the malicious flow condition. 
+
 
 
    
