@@ -14,7 +14,7 @@ The SDN POX controller Version 1.0 is used as the source development platform to
 POX is an open source and is becoming more commonly used SDN controller development platform.
 
 The TCP SYN attack detection and mitigation application written for this use case provides: 
-    - The defense when there is a malicious flow by deleting the flow 
-    - Black listing the source IP, 
-    - At the same time,  allows legitimate flows that do not exceed the SYN packet threshold condition
+* The defense when there is a malicious flow by deleting the flow.
+* Black listing the source IP.
+* At the same time, allows legitimate flows that do not exceed the SYN packet threshold condition.
 
