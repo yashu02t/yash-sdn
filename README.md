@@ -8,10 +8,13 @@ Dos/DDos detection and mitigation applications were designed and written in Pyth
 
 ## TCP SYN Attack mitigation
 Utilizing the capabilities of SDN, an application is written in Python on the SDN controller to identify and mitigate TCP SYN attack.
+
 The SDN POX controller Version 1.0 is used as the source development platform to create SDN based Dos mitigation application.
-POX is an open source and is becoming more commonly used SDN controller development platform
+
+POX is an open source and is becoming more commonly used SDN controller development platform.
+
 The TCP SYN attack detection and mitigation application written for this use case provides: 
-The defense when there is a malicious flow by deleting the flow 
-Black listing the source IP, 
-At the same time,  allows legitimate flows that do not exceed the SYN packet threshold condition
+    - The defense when there is a malicious flow by deleting the flow 
+    - Black listing the source IP, 
+    - At the same time,  allows legitimate flows that do not exceed the SYN packet threshold condition
 
