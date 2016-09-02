@@ -27,7 +27,7 @@ Following is the summary of the TCP SYN mitigation application:
 * Based on the flow statistics, Controller detects whether the flow is malicious. This is achieved on the malicious flow condition:
     * If the SYN packets/sec is < 40 of a flow, the flow is treated as normal flow
     * If the SYN packets/sec is > 40 of a flow, the flow is treated as malicious flow, the controller instructs the switch to drop the
-    * packets and delete the flow.
+    * packets and delete the flow.
 * POX Controller application controls the Open virtual switches
     * Adds the flows
     * Allows flows that are not treated malicious
@@ -35,6 +35,17 @@ Following is the summary of the TCP SYN mitigation application:
     * Black lists the source IP addresses of the offender (malicious flows originator)
     * Blocks the packets originating from the black listed sources.
     * Allows packets of different flow of clients when these flows do not reach malicious threshold condition.
+
+## Botnet Attack Mitigation
+
+* Utilizing the capabilities of SDN, an application is written in Python on the SDN controller to identify and mitigate Botnet attacks.
+* The SDN POX controller Version 1.0 is used as the source development platform to create SDN based Dos mitigation application.
+* The Botnet attack detection and mitigation application written for this use case provides: 
+   * The defense when there is a malicious flow by deleting the flow pertaining to Bots 
+   * Black listing the Bots
+   * At the same time,  allows legitimate flows that do not exceed the malicious threshold condition of Botnet attacks
+
+   
 
 
 
